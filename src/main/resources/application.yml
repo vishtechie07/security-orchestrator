@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+security:
+  sandbox:
+    base-path: /tmp/security-sandbox
+
+audit:
+  rate-limit:
+    max-per-minute: 10
+    window-seconds: 60
+  clone-timeout-seconds: 300
+
+langchain4j:
+  open-ai:
+    chat-model:
+      model-name: gpt-4o-mini
+
+semgrep:
+  docker:
+    enabled: true
+    image: semgrep/semgrep:latest
+  bundled-dir: tools/semgrep
+  command: semgrep
+
+gitleaks:
+  docker:
+    enabled: true
+    image: zricethezav/gitleaks:latest

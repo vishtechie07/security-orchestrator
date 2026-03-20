@@ -1,0 +1,33 @@
+# Bundled Semgrep binary (run scripts/setup-semgrep.* to populate)
+tools/semgrep/
+
+# Maven / Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+.pnpm-debug.log*
+
+# Env & secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Sandbox / local clones (if ever under repo root)
+/tmp/
